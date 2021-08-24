@@ -1,0 +1,261 @@
+html
+,body {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 14px;
+    font-family: arial,sans-serif;
+    color: #222;
+}
+
+.container{
+    display: grid;
+    min-width: 400px;
+    width: 100vl;
+    height: 100vh;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "nav" "logo" "main" "footer";
+    overflow: hidden;
+}
+
+/* nav bar */
+
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    min-height: 92px;
+    font: 13px/27px Roboto,RobotoDraft,Arial,sans-serif;
+}
+
+nav{
+    align-items: center;
+    font-size: 13px;
+    padding-right: 30px;
+    margin-top: 0px;
+    box-sizing: border-box;
+    height: 48px;
+    line-height: normal;
+    vertical-align: middle;
+}
+
+header .nav_bar{
+    display: inline-block;
+    margin-left: 15px;
+    color: rgba(0,0,0,0.87);
+    padding: 0;
+}
+
+.google_nav-link{
+    color: #222;
+    padding: 0 9px;
+    margin-right: 1px;
+    align-items: center;
+    text-decoration: none;
+}
+
+.material-icons{
+    border-radius: 50%;
+    margin: 5px;
+    vertical-align: middle;
+    opacity: .5;
+}
+
+.google_nav-link:hover,
+.material-icons:hover{
+    cursor: pointer;
+}
+
+.google_nav-link:hover{
+    text-decoration: underline;
+}
+
+.material-icons:hover{
+    display: inline-block;
+    border-radius: 50%;
+    color: #1a0dab;
+}
+
+
+.sign-in{
+    background-color: #1a73e8;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.25px;
+    line-height: 16px;
+    margin-left: 10px;
+    margin-right: 25px;
+    min-width: 96px;
+    padding: 9px 23px;
+    text-align: center;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.sign-in:hover{
+    background-color: #2b7de9;
+    box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+}
+/* .space{
+    min-height: 92px;
+    min-height: 150px;
+    max-height: 200px;
+    height: calc(100%- 560px)
+    max-height: 92px;
+    position: relative;
+} */
+
+/* body */
+
+main{
+    padding:20px;
+}
+
+.center{
+    margin: 30px auto; 
+    text-align: center;
+}
+
+.search{
+    flex-shrink: 0;
+    box-sizing: border-box;
+    max-height: 160px;
+}
+
+.search_shape{
+    position: relative;
+    display: flex;
+    flex: 1;
+    width: auto;
+    max-width: 583px;
+    background: #fff;
+    display:flex;
+    border: 1px solid #dfe1e5;
+    box-shadow: none;
+    border-radius: 24px;
+    height: 44px;
+    margin: 0 auto;
+    padding: 5px 8px 0 16px;
+}
+
+#box{
+    position: absolute;
+    background-color: transparent;
+    width: auto;
+    max-width:583px;
+    border: none;    
+    outline: none;
+    margin: 0;
+    margin-top: 0px;
+    padding: 0;
+    color: rgba(0,0,0,.87);
+    word-wrap: break-word;
+    display: flex;
+    flex: 100%;
+    margin-top: -34px;
+    margin-left:45px;
+    height: 34px;
+    font-size: 16px;
+    font-family: arial,sans-serif;
+    color: #222;
+}
+
+/* button */
+
+.center input[type="submit"]{
+    background-color: #f8f9fa;
+    border:1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.hr{
+    flex-grow: 1;
+}
+
+.lang{
+    text-decoration: none;
+    color: #1a0dab;
+}
+
+.lang:hover{
+    text-decoration: underline;
+}
+
+/* footer */
+
+footer{
+    /* padding: 0 1px; */
+}
+
+.footer1
+,.footer2{
+    background: #f2f2f2;
+    font-size: 15px;
+    color: rgba(0,0,0,.54);
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 7px 6px;
+}
+
+footer a{
+    text-decoration: none;
+    color: rgba(0,0,0,.54);
+    padding: 10px 10px;
+}
+
+.footer1{
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer2{
+    display: flex;
+    padding: 17px 4px;
+}
+
+@media only screen and (max-width:1200px) {
+.footer2 {
+     justify-content:space-evenly;
+     padding: 10px 6px;
+    }
+
+.footer2-left{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer2-left a{
+    display: block;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.footer2-right{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer2 a:hover{
+    text-decoration: underline;
+}
